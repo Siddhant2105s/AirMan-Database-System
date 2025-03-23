@@ -14,6 +14,7 @@ Biggin Hill is used by many business flights involving business jets and similar
 London Biggin Hill Ltd owns and manages the airfield, which operates national and international flights for private, corporate, and commercial aircraft. It also provides an aircraft home base for aircraft owners, aircraft management companies, and industrial customers, such as Formula One base. As with many organizations that grew organically, Biggin Hill Airport’s information needs are met using a variety of ad-hoc, siloed systems that are not fit for purpose. David Winstanley, CEO of London Biggin Hill Airport, commissioned a new project aimed at replacing these disparate systems into a unified, modular design of systems. The core operations and services that support the Airport’s value proposition to customers are:
 
 - General operations such as customer and visitor parking, ground transport, security and UK Border Patrol, Heli-shuttle transit services, private airport lounges, baggage handling, contactless travel (a new Covid-19 measure), and aircraft charter.
+
 - Core operations on the aircraft side include ground handling equipment, maintenance, aircraft cleaning, catering, and hanger facilities are available. Pilot services are also provided. Non-commercial private aircraft are also accommodated and managed.
 
 The CEO has awarded a tender to Irish software development company AirSoft to develop the first module AirMan.
@@ -33,8 +34,6 @@ Using the identified entities and attributes, an Entity-Relationship Diagram (ER
 ### Step 3: Implementing the Database in MySQL
 
 With the ERD as a blueprint, the next step was to implement the database schema in MySQL. This involved creating tables for each entity and defining their relationships.
-
-Path: [Database Creation Script](./SQL_scripts/AirManDB_create_queries.sql)
 
 #### Example Snippet:
 ```sql
@@ -70,8 +69,6 @@ After creating the database schema in MySQL, the schema was reverse-engineered t
 
 Mock data was inserted into the tables to demonstrate the system's functionality. This data serves as sample records to test and validate the database operations.
 
-Path: [Database Insertion Script](./SQL_Scripts/AirManDB_insert_queries.sql)
-
 #### Example Snippet:
 ```sql
 -- Adding PERSON table data
@@ -99,12 +96,15 @@ The dataset can be seen here: [Datasets and Tables](./SQL_scripts/datasets_and_t
 The IT management team is interested in important analytics to help them understand and manage the airport operations effectively. Below listed questions were posed, and SQL queries were written to answer these questions.
 
 - Calculate the landing, service, fuelling, and parking fees for a customer of your choice in February 2024 and indicate if this customer is a corporation.
+
 - List which pilots who are also customers made the most take-offs and landings at the airport in February 2024 and indicate which aircraft they flew by type and registration number.
+
 - List the employees (by employee number, name, and role) who are qualified service personnel who performed routine services on all aircraft owned by a specific corporation in February 2024.
+
 - From the previous list, list all the parts used in a service per aircraft type, part number and part name.
+
 - List the names of all aircraft by type, model, and registration number that landed and were refuelled and/or parked and/or cleaned in February 2024 and the total revenue per aircraft and the total revenue to Biggin Hill for that month.
 
-Path: [SQL Answers Script](./SQL_Scripts/AirManDB_answer_script.sql)
 
 #### 1. Calculate the landing, service, fuelling, and parking fees for a customer of your choice in February 2024 and indicate if this customer is a corporation.
 This helps IT management understand the costs associated with a specific customer's aircraft operations during a given period.
@@ -283,8 +283,6 @@ GROUP BY
 
 
 ### Data Definitions and Normalization
-
-Path: [Data Definitions and Normalization](./Data_Definitions_and_Normalization.md)
 
 This document provides detailed data definitions for all entities and explains how the database design adheres to the principles of normalization.
 
